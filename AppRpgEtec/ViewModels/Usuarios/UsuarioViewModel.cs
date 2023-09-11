@@ -1,5 +1,6 @@
 ﻿using AppRpgEtec.Models;
 using AppRpgEtec.Services.Usuarios;
+using AppRpgEtec.Views.Usuarios;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -111,7 +112,20 @@ namespace AppRpgEtec.ViewModels.Usuarios
             {
                 await Application.Current.MainPage
                     .DisplayAlert("Informação", ex.Message + " Detalhes : " + ex.InnerException, "Ok");
-                throw;
+            }
+        }
+
+        public async Task DirecionarParaCadastro()
+        {
+            try
+            {
+                await Application.Current.MainPage
+                    .Navigation.PushAsync(new CadastroView());
+            }
+            catch (Exception ex)
+            {
+                await Application.Current.MainPage
+                    .DisplayAlert("Informação", ex.Message + " Detalhes : " + ex.InnerException, "Ok");
             }
         }
         #endregion
