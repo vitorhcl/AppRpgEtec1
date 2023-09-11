@@ -15,6 +15,7 @@ namespace AppRpgEtec.ViewModels.Usuarios
         private UsuarioService uService;
         public ICommand RegistrarCommand { get; set; }
         public ICommand AutenticarCommand { get; set; }
+        public ICommand DirecionarCadastroCommand { get; set; }
 
         public UsuarioViewModel()
         {
@@ -25,6 +26,7 @@ namespace AppRpgEtec.ViewModels.Usuarios
         {
             RegistrarCommand = new Command(async () => await RegistrarUsuario());
             AutenticarCommand = new Command(async () => await AutenticarUsuario());
+            DirecionarCadastroCommand = new Command(async () => await DirecionarParaCadastro());
         }
 
         #region AtributosPropriedades
