@@ -49,6 +49,27 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <AndroidResource Remove="Services\NewFolder\**" />
+	  <AndroidResource Remove="Services\Usuarios\NewFolder1\**" />
+	  <AndroidResource Remove="Services\Usuarios\NewFolder\**" />
+	  <Compile Remove="Services\NewFolder\**" />
+	  <Compile Remove="Services\Usuarios\NewFolder1\**" />
+	  <Compile Remove="Services\Usuarios\NewFolder\**" />
+	  <EmbeddedResource Remove="Services\NewFolder\**" />
+	  <EmbeddedResource Remove="Services\Usuarios\NewFolder1\**" />
+	  <EmbeddedResource Remove="Services\Usuarios\NewFolder\**" />
+	  <MauiCss Remove="Services\NewFolder\**" />
+	  <MauiCss Remove="Services\Usuarios\NewFolder1\**" />
+	  <MauiCss Remove="Services\Usuarios\NewFolder\**" />
+	  <MauiXaml Remove="Services\NewFolder\**" />
+	  <MauiXaml Remove="Services\Usuarios\NewFolder1\**" />
+	  <MauiXaml Remove="Services\Usuarios\NewFolder\**" />
+	  <None Remove="Services\NewFolder\**" />
+	  <None Remove="Services\Usuarios\NewFolder1\**" />
+	  <None Remove="Services\Usuarios\NewFolder\**" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 	</ItemGroup>
@@ -58,6 +79,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Personagens\ListagemView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Usuarios\LoginView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
